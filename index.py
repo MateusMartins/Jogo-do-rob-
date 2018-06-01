@@ -37,4 +37,3 @@ for i in range(20):
     print('Posição atual do caminhoneiro na matriz: %s' % (caminhoneiro))
     #Validação da recompensa
     Validador.check_reward(caminhoneiro,rewards)
-    
