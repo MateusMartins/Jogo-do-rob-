@@ -1,7 +1,11 @@
-class Robo:
+class Point(object):
     def __init__(self, x, y):
         self.x = x
         self.y = y
+
+class Robot(Point):
+    def __init__(self, x, y):
+        super(Robot, self).__init__(x, y)
         
     def Escrever_x(self):
         print(self.x)
@@ -29,7 +33,13 @@ class Robo:
         else:
             print('Movimento inválido')
 
-class Robo3D(Robo):
+class Reward(Point):
+
+    def __init__(self, x, y, name):
+        super(Reward, self).__init__(x, y)
+        self.name = name
+
+class Robo3D(Point):
 
     def __init__(self, x, y, z):
         super(Robo3D, self).__init__(x, y)
