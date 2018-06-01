@@ -1,7 +1,11 @@
 from robo import Robot
-from robo import Robo3D
 from robo import Reward
 
-r1 = Robot(5, 5)
+r1 = Robot(0, 9)
+r2 = Robot(9, 0)
 
-moeda = Reward(10,0,'Moeda de Ouro')
+comida = Reward(10,0,'Comida')
+gasolina = Reward(0,10,'Gasolina')
+rewards = [comida, gasolina]
+
+Validador = r1.check_reward(r1,rewards)

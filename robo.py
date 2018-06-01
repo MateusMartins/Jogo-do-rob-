@@ -32,6 +32,11 @@ class Robot(Point):
             self.x = self.x - 1
         else:
             print('Movimento inválido')
+    
+    def check_reward(self, robot, rewards):
+        for reward in rewards:
+            if reward.x == robot.x and reward.y == robot.y:
+                print('Você encontrou a seguinte recompensa %s' % reward.name)
 
 class Reward(Point):
 
@@ -39,8 +44,12 @@ class Reward(Point):
         super(Reward, self).__init__(x, y)
         self.name = name
 
-class Robo3D(Point):
 
-    def __init__(self, x, y, z):
-        super(Robo3D, self).__init__(x, y)
-        self.z = z
+
+
+
+#class Robo3D(Point):
+#
+#    def __init__(self, x, y, z):
+#        super(Robo3D, self).__init__(x, y)
+#        self.z = z
