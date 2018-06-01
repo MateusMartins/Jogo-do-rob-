@@ -10,7 +10,7 @@ class Robot(Point):
     #Construtor do robô
     def __init__(self, x, y):
         super(Robot, self).__init__(x, y)
-    
+
     #Escreve qual é a posição x do robô na matriz
     def Escrever_x(self):
         print(self.x)
