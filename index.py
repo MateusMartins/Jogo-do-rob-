@@ -1,3 +1,4 @@
-import robo
+from robo import Robo
+from robo import Robo3D
 
-robol = robo.Robo(10, 5)
+r1 = Robo(5, 5)
