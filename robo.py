@@ -4,6 +4,10 @@ class Point(object):
     def __init__(self, x, y):
         self.x = x
         self.y = y
+    
+    #Converte o objeto para string
+    def __str__(self):
+        return '<%s, %s>' % (self.x, self.y)
 
 #Classe utilizada para criar o robô e movimenta-lo
 class Robot(Point):
@@ -54,13 +58,23 @@ class Reward(Point):
         super(Reward, self).__init__(x, y)
         self.name = name
 
+    #Converte o objeto para string
+    def __str__(self):
+        return '<%s, %s>: %s' % (self.x, self.y, self.name)
+
+    def __repr__(self):
+        return '<Reward> %s' % str(self)
+
 #Classe utilizada para validar os dados
 class Validacao(object):
     #Validador de procura de recompensa
     def check_reward(self, robot, rewards):
+            ok = False
             for reward in rewards:
                 if reward.x == robot.x and reward.y == robot.y:
                     print('Você encontrou a seguinte recompensa: %s' % reward.name)
+                    ok = True
+            return ok
 
 #class Robo3D(Point):
 #    def __init__(self, x, y, z):
